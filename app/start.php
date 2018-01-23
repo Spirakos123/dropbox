@@ -7,13 +7,12 @@ require  __DIR__ . '/../vendor/autoload.php';
 
 use Kunnu\Dropbox\Dropbox;
 use Kunnu\Dropbox\DropboxApp;
-use Kunnu\Dropbox\DropboxFile;
 
 
 
 $dropboxKey = 'ev6dwwkny7xdeug';
 $dropboxSecret = 'uffbqggrcvyvgje';
-$token = 't9SqgUJEYLAAAAAAAAAAHQyG5c6SQKf_miB9Opl7_uQXhaZPppDkwesaUMR-o7-_';
+$token = 't9SqgUJEYLAAAAAAAAAANl9mDWEpRA8Kk_A0awrpa0-2Nu5nhibwJ4BM57VYS-Js';
 $appName = 'vassoApp';
 
 
@@ -38,16 +37,16 @@ $authHelper = $dropbox->getAuthHelper();
 // echo "</pre>";
 
 //Callback URL
-$callbackUrl = "http://localhost/db_v2/dropbox_finish.php";
+$callbackUrl = "http://localhost/dropbox/dropbox_finish.php";
 
 //Define auth details
 //$webAuth = new Dropbox\WebAuth($appInfo,$appName,'http://localhost/dropboxapi/dropbox_finish.php',$csrfTokenStore);
 
-$db = new PDO ('mysql:host=localhost;dbname=dropbox','root','');
-//User details
-
-    $user= $db->prepare("SELECT * FROM users ");
-    $user->execute(['user_id' => $_SESSION['user_id']]);
-    $user = $user->fetchObject();
-    var_dump($user);
+// $db = new PDO ('mysql:host=localhost;dbname=dropbox','root','');
+// //User details
+//
+//     $user= $db->prepare("SELECT * FROM users ");
+//     $user->execute(['user_id' => $_SESSION['user_id']]);
+//     $user = $user->fetchObject();
+//     var_dump($user);
 ?>
